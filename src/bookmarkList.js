@@ -1,6 +1,6 @@
+import store from './store.js';
 
-
-const store = (function(){
+const bookmarkList = (function(){
 
   function generateBookmarkElement(item) {
     return `
@@ -13,9 +13,9 @@ const store = (function(){
   }
 
 
-  function generateBookmarkString(bookmarkList) {
-    const items = bookmarkList.map((item) => generateBookmarkElement(item));
-    return items.join('');
+  function generateBookmarkString(list) {
+    const items = (item => generateBookmarkElement(item));
+    return items;
   }
 
 
@@ -119,8 +119,11 @@ const store = (function(){
       const desc = event.currentTarget.desc.value;
       const rate = event.currentTarget.rate.value;
       console.log(`add bookmark`);
+    
+    
+    
 
-      api.createItem(title, url, desc, rate, function(response) {
+        api.createItem(title, url, desc, rate, function(response) {
         store.addItem(response);
         store.adding = false;
         render();
@@ -220,4 +223,4 @@ const store = (function(){
     bindEventListeners
   };
 }());
-export default store;
+export default bookmarkList;

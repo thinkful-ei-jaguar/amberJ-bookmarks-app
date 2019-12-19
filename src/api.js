@@ -1,5 +1,6 @@
-const BASE_URL = 'https://thinkful-list-api.herokuapp.com/amberJ/bookmarks';
 
+const BASE_URL = 'https://thinkful-list-api.herokuapp.com/amberJ/bookmarks';
+const api = (function(){
 function listApiFetch(...args) {
   let error;
   return fetch(...args)
@@ -23,8 +24,9 @@ function listApiFetch(...args) {
 
       return data;
     });
-
+    
 }
+
 
 const getBookmarks = function () {
   return listApiFetch(`${BASE_URL}`);
@@ -56,9 +58,11 @@ const deleteBookmarks = function (id) {
 
 
 
-export default {
+return {
   getBookmarks,
   createBookmarks,
-  deleteBookmarks,
-  updateBookmarks
+  updateBookmarks,
+  deleteBookmarks
 };
+})();
+export default api;
