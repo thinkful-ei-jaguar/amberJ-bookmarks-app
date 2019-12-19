@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="index.css"> 
+    <title>Amber's Bookmark App</title>
+</head>
+<body>
+    <div class="container">
+        <header role="banner">
+            <h1>Ultimate Bookmark App</h1></a>
+            <form id="js-create-bookmark-form">
+                <button class="header-button js-header-button" type="submit">Add Bookmark</button>
+            </form>
+            <form id="js-filter-bookmark-form" class="filter-bookmark-form">
+                <label for="rating-filter">
+                    <select class="header-select js-header-select">
+                        <option value="" id="rating-filter">Ratings Filter</option>
+                        <option value="5" id="rating-filter-5">★★★★★ Stars</option>
+                        <option value="4" id="rating-filter-4">★★★★☆ Stars</option>
+                        <option value="3" id="rating-filter-3">★★★☆☆ Stars</option>
+                        <option value="2" id="rating-filter-2">★★☆☆☆ Stars</option>
+                        <option value="1" id="rating-filter-1">★☆☆☆☆ Star</option>
+                    </select>
+                </label>
+            </form>
+        </header>
+        <main role="main" class="bookmark-panel js-bookmark-panel">
+            <ul class="bookmark-list js-bookmark-list">
+            </ul>
+        </main>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./src/api.js" type="module"></script>
+    <script src="./src/store.js" type="module"></script>
+    <script src="./src/bookmarkList.js" type="module"></script>
+    <script src="./src/index.js" type="module"></script>
+</body>
+</html>

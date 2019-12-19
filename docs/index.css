@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(38, 10, 75);
+}
+
+header {
+  display: inline-block;
+  padding: 8px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-left: 10px;
+  margin-top: 20px;
+  float:left;
+  color: rgb(0, 0, 0);
+}
+
+h2 {
+  font-size: 120%;
+}
+
+h3 {
+  font-size: 120%;
+}
+
+header form {
+  margin: 35px 0 0 15px;
+  float: left;
+}
+
+button {
+  height: 35px;
+  padding: 5px;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 5px;
+  font-size: 100%;
+}
+
+input[type=submit] {
+  height: 50px;
+  padding: 5px;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 7px;
+  float: left;
+  align: top;
+}
+
+select {
+  font-size: 90%;
+  width: 160px;
+  height: 60px;
+  padding: 5px;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 7px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(197, 20, 20);
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  font-size: 120%;
+  max-width: 600px;
+  min-width: 280px;
+  height: fit-content;
+  margin: 100px auto;
+  background-color: rgb(97, 17, 77);
+  border: solid 4px rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+button.js-header-button {
+  height: 60px;
+  width: 160px;
+  background-color: #ffffff;
+}
+
+.bookmark-panel {
+  margin-bottom: 20px;
+}
+
+.bookmark-list-items {
+  clear: left;
+  width: 95%;
+  min-width: 200px;
+  height: fit-content;
+  margin: 12px auto;
+  background-color: #ffffff;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 1%;
+}
+
+.bookmark-list-items:hover, 
+button:hover, 
+select:hover {
+  background-color: rgba(219, 231, 245, 0.808);
+  cursor: pointer;
+  border: solid 2px #ffffff;
+}
+
+.list-title, a.bookmark-link, .star-rating {
+  margin: 10px;
+}
+
+a.list-link {
+  margin-top: 10px;
+  word-break: break-all;
+  width: 40%;
+  padding: 0;
+}
+
+.create-bookmark-view {
+  clear: left;
+  width: 95%;
+  min-width: 200px;
+  height: fit-content;
+  margin: 8px auto;
+  background-color: #ffffff;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+.create-bookmark-view h2,
+.create-bookmark-view p,
+.add-bookmark-title, 
+.add-bookmark-link, 
+.add-bookmark-desc,
+.rate-radio-button,
+.add-button-submit,
+#add-star-rating {
+  margin: 8px;
+  width: 47%;
+}
+
+.add-bookmark {
+  border: #000000;
+}
+
+.add-bookmark-title, 
+.add-bookmark-link {
+  width: 95%;
+  height: 45px;
+  margin-top: 5px;
+  border: solid 1px rgb(0, 0, 0);;
+}
+
+.add-bookmark-desc {
+  width: 95%;
+  height: 100px;
+  border: solid 1px rgb(0, 0, 0);
+  word-wrap: break-word;
+}
+
+.add-button-submit {
+  margin-top: -60px;
+  margin-bottom: 20px;
+  height: 50px;
+  float: right;
+}
+
+.add-bookmark-title {
+  margin-top: 25px;
+}
+
+.expand-bookmark-view {
+  padding: 8px;
+  clear: left;
+  width: 95%;
+  min-width: 200px;
+  height: fit-content;
+  margin: 8px auto;
+  background-color: #ffffff;
+  border: solid 2px rgb(0, 0, 0);;
+  border-radius: 5px;
+}
+
+.add-button-submit button:hover,
+ .expand-bookmark-view button:hover {
+  border: solid #000000 2px;
+}
+
+.header-right {
+  float: right;
+}
+
+p.expanded-stars {
+  margin-top: -10px;
+  margin-right: 10px;
+  float: left;
+}
+
+.close-button {
+  margin-top: -18px;
+  float: left;
+}
+
+.close-header-right {
+  margin-top: -28px;
+  margin-right: 10px;
+  float: right;
+}
+
+.long-desc, 
+.visit-site-button, 
+.delete-bookmark-button
+.edit-bookmark-button {
+  margin: 15px;
+}
+
+a.bookmark-link {
+  padding: 8px;
+  margin-top: 20px;
+  word-break: break-all;
+}
+.visit-site-button {
+  width: 40%;
+  height: 50px;
+}
+
+.delete-bookmark-button {
+  float: right;
+  width: 40%;
+  height: 50px;
+  margin-top: -65px;
+}
+
+.edit-bookmark-button {
+  margin-left: 32px;
+  width: 40%;
+  height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  .container {
+    margin: 4%;
+  }
+
+  .rate-radio-button, .add-button-submit {
+    float: none;
+    width: 95%;
+    margin-top: 10px;
+  }
+  .header-right {
+    float: none;
+    margin-top: 20px;
+  }
+  p.expanded-stars {
+    float: left;
+    width: 45%;
+  }
+
+  .close-button {
+    float: left;
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .visit-site-button, 
+  .delete-bookmark-button
+  .edit-bookmark-button {
+    width: 95%;
+    float: none;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .visit-site-button {
+    margin-left: -20px;
+  }
+
+
+  a.bookmark-link {
+    word-break: break-all;
+  }
+
+}
