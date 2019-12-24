@@ -1,4 +1,4 @@
-Find my app here: https://github.com/thinkful-ei-jaguar/amberJ-bookmarks-app/tree/gh-pages
+Find my app here: https://thinkful-ei-jaguar.github.io/amberJ-bookmarks-app/
 
 Users can add bookmarks to my bookmark list. Bookmarks contain:
 
