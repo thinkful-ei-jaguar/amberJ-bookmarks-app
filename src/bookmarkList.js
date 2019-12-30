@@ -1,4 +1,5 @@
 import store from './store.js';
+import api from './api.js';
 
 const bookmarkList = (function(){
 
@@ -144,8 +145,6 @@ const bookmarkList = (function(){
       }
     });
   }
-
-
   function handleDeleteBookmarkClicked() {
     $('.js-bookmark-list').on('click', '.js-delete-bookmark-button', event => {
       const id = $(event.currentTarget.parentElement.parentElement).data('item-id');
@@ -157,16 +156,18 @@ const bookmarkList = (function(){
     });
   }
 
-
   function handleEditBookmarkSubmit(){
-    $('.js-bookmark-list').on('submit', '.edit')
+    $('.js-bookmark-list').on('submit', '.edit', event => {
+      const id = getItemIdFromElement(event.currentTarget);
+      let item = store.findById(id);
+    })
   }
  
   function handleEditBookmarkClicked(){
     $('.js-bookmark-list').on('click', '.js-edit-bookmark-button', event =>{
       const id = getItemIdFromElement(event.currentTarget);
       let item = store.findById(id);
-      console.log(id);
+      // console.log(id);
       $(event.currentTarget).remove();
       if(item.id === id) {
         const expandView = generateExpandedView(item);
@@ -215,7 +216,7 @@ const bookmarkList = (function(){
     handleAddBookmarkClicked();
     handleDeleteBookmarkClicked();
     handleEditBookmarkClicked();
-    //handleEditBookmarkSubmit();
+    handleEditBookmarkSubmit();
   }
 
   return {

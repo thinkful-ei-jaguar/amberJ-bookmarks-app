@@ -1,4 +1,3 @@
-
 const BASE_URL = 'https://thinkful-list-api.herokuapp.com/amberJ/bookmarks';
 const api = (function(){
 function listApiFetch(...args) {

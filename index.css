@@ -47,7 +47,7 @@ input[type=submit] {
   border: solid 2px rgb(0, 0, 0);
   border-radius: 7px;
   float: left;
-  align: top;
+  align-content: center;
 }
 
 select {
@@ -245,7 +245,7 @@ a.bookmark-link {
 }
 
 @media only screen and (max-width: 600px) {
-
+}
   h2 {
     margin-bottom: 40px;
   }
@@ -292,4 +292,3 @@ a.bookmark-link {
     word-break: break-all;
   }
 
-}

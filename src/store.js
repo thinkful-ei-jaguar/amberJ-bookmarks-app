@@ -1,4 +1,4 @@
-
+// import api from './api.js';
 
 const store = (function(){
 
@@ -111,22 +111,22 @@ const store = (function(){
   }
 
 
-  function handleAddBookmarkClicked() {
-    $('#js-add-bookmark').on('submit', (function(event) {
-      event.preventDefault();
-      const title = event.currentTarget.title.value;
-      const url = event.currentTarget.url.value;
-      const desc = event.currentTarget.desc.value;
-      const rate = event.currentTarget.rate.value;
-      console.log(`add bookmark`);
+  // function handleAddBookmarkClicked() {
+  //   $('#js-add-bookmark').on('submit', (function(event) {
+  //     event.preventDefault();
+  //     const title = event.currentTarget.title.value;
+  //     const url = event.currentTarget.url.value;
+  //     const desc = event.currentTarget.desc.value;
+  //     const rate = event.currentTarget.rate.value;
+  //     console.log(`add bookmark`);
 
-      api.createItem(title, url, desc, rate, function(response) {
-        store.addItem(response);
-        store.adding = false;
-        render();
-      });
-    }));
-  }
+  //     api.createItem(title, url, desc, rate, function(response) {
+  //       store.addItem(response);
+  //       store.adding = false;
+  //       render();
+  //     });
+  //   }));
+  // }
 
 
   function handleExpandViewClicked() {
@@ -212,7 +212,7 @@ const store = (function(){
     handleAddBookmarkClicked();
     handleDeleteBookmarkClicked();
     handleEditBookmarkClicked();
-    //handleEditBookmarkSubmit();
+    handleEditBookmarkSubmit();
   }
 
   return {
